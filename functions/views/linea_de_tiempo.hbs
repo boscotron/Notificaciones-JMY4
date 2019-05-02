@@ -1,0 +1,55 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-chat card-timeline">
+                    <div class="card-header">
+                        <h4 class="card-title">Línea de Tiempo</h4>
+                        <p class="category">{{usuario.nombre}} </p>
+                        <input type="hidden" name="" id="nameuse" value="{{usuario.nombre}}">
+                        <h1 id="ola" name="ola"></h1>
+                    </div>
+                    <div class="card-content">
+                        <div class="send-message">
+                            <div class="avatar">
+                                <img src="{{usuario.foto}}" alt="crash"/>
+                            </div>
+                               <input class="form-control textarea" type="text" id="texto" placeholder="¿Quieres comentar algo?"/>
+        
+                            
+                            <div class="send-button">
+                                <button class="btn btn-primary btn-fill" id="save">Guardar</button>
+                            </div> 
+                            <div>
+                                <label for="img" class="btn btn-default btn-file">
+                                <input type="file" class="form-control" id="img" name="img" style="display: none;"><i class="fas fa-images"></i>Foto</label>
+
+                                <label for="vdo" class="btn btn-default btn-file">
+                                <input type="file" class="form-control" id="vdo" name="vdo" style="display: none;"><i class="fas fa-video"></i>Video</label>
+                            </div>
+                            <div>
+                                <img src=""  alt="" id="visualizarI" style="height: 200px;width: 250px">
+                                <video src="" id="visualizarV" controls style="height: 200px;width: 250px" hidden=""></video>
+                            </div>
+                        </div>
+                        <ul class="timeline timeline-simple">
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge info">
+                                    <i class="ti-credit-card"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <span class="label label-info">TimeLine</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
