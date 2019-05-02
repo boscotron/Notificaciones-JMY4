@@ -112,7 +112,7 @@ app.get('/', jmy.sesion(jmy_connect.key),async (req, res) => {
     let data=context(req);
     
     
-    notificaciones.enviar({
+    notificaciones.enviar([{
       cabezera:{
         etiqueta:"",
         tipo:"",
@@ -130,7 +130,25 @@ app.get('/', jmy.sesion(jmy_connect.key),async (req, res) => {
         publicacion:"" // [] || {}
       }
 
-    }).then(function(res,err){
+    },{
+      cabezera:{
+        etiqueta:"",
+        tipo:"",
+        titulo:"",
+        uid:"", // id del usuario creador
+        euid:[], // id de usuarios etiquetados 
+        api:"",
+        url:"",
+        url_app:"",
+        fecha:"",
+        fecha_notificacion:"",
+        fecha_lectura:"",
+      },
+      cuerpo:{
+        publicacion:"" // [] || {}
+      }
+
+    }]).then(function(res,err){
       console.log(res,err);
     });
 

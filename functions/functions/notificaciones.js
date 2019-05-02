@@ -31,6 +31,10 @@ module.exports = {
 function enviar(d=[],a={}){
     return new Promise(
         function(resolve, reject) {           
+            d.forEach(element => {
+                console.log(element);
+                
+            });
             var c = {que:d,ola:'que hace'};
             if(1)
                 resolve(c);       
